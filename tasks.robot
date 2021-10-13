@@ -6,7 +6,7 @@ Library           RPA.Browser.Selenium
 Library           RPA.Excel.Files
 Library           RPA.HTTP
 Library           RPA.Tables
-Library           test
+Library           Arduino.py
 
 *** Variables ***
 ${ON_1}=          1
@@ -63,24 +63,24 @@ Turn LED 1 ON
     [Documentation]    Turning LED 1 ON
     ${on}=    Convert To String    ${ON_1}
     Talk To Arduino    ${on}
-
+    Loop Through
 Turn LED 2 ON
     [Documentation]    Turning LED 2 ON
     ${on}=    Convert To String    ${ON_2}
     Talk To Arduino    ${on}
+    Loop Through
 
 Turn LED 3 ON
     [Documentation]    Turning LED 3 ON
     ${on}=    Convert To String    ${ON_3}
     Talk To Arduino    ${on}
+    Loop Through
 
 Turn LED 4 ON
     [Documentation]    Turning LED 4 ON
     ${on}=    Convert To String    ${ON_4}
     Talk To Arduino    ${on}
-    Sleep    2
-    ${off}=    Convert To String    ${OFF}
-    Talk To Arduino    ${off}
+    Loop Through
 
 Download The Csv File
     [Documentation]    Downloading the csv file
